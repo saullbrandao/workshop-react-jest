@@ -1,4 +1,4 @@
-export const cardBuilder = props => {
+export const cardBuilder = (props = {}) => {
   return {
     id: Math.random().toString(36).substr(2, 9),
     name: 'Pikachu',
@@ -9,3 +9,14 @@ export const cardBuilder = props => {
     ...props,
   }
 }
+
+export const pikachuMock = cardBuilder()
+export const squirtleMock = cardBuilder({ name: 'Squirtle', types: ['Water'] })
+export const bulbasaurMock = cardBuilder({
+  name: 'Bulbasaur',
+  types: ['Grass'],
+})
+export const charmanderMock = cardBuilder({
+  name: 'Charmander',
+  types: ['Fire'],
+})
